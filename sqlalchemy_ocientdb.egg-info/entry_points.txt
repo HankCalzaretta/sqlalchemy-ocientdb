@@ -1,0 +1,4 @@
+[sqlalchemy.dialects]
+ocientdb = sqlalchemy_ocientdb.pyodbc:OcientDbDialect_pyodbc
+ocientdb.pyodbc = sqlalchemy_ocientdb.pyodbc:OcientDbDialect_pyodbc
+

@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: sqlalchemy-ocientdb
+Version: 1.0.dev0
+Summary: OcientDb for SQLAlchemy
+Home-page: UNKNOWN
+Author: Hank Calzaretta
+Author-email: hcalzaretta@ocient.com
+License: MIT
+Description: An Ocient Database dialect for SQLAlchemy.
+        
+Keywords: SQLAlchemy OcientDb
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Database :: Front-Ends
