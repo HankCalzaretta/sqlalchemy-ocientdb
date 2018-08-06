@@ -29,10 +29,6 @@ File odbcinst.ini:  (directory where this file resides pointed to by env. variab
 [OcientDB]
 Driver = /home/user/sqlalchemy/ocient_odbc.so
 FileUsage = 1
-[PostgreSQL]
-Driver64 = /usr/lib/x86_64-linux-gnu/odbc/psqlodbcw.so
-Setup64  = /usr/lib/x86_64-linux-gnu/odbc/libodbcpsqlS.so
-FileUsage = 1
 [ODBC]
 Trace = yes
 TraceFile = /home/user/sqlalchemy/odbctrace.out
