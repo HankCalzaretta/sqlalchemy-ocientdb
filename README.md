@@ -21,3 +21,44 @@ For example:
 ```python
 engine = create_engine('ocientdb+pyodbc://looker:looker@OcientLkr')
 ```
+
+# Sample ODBC Connection Parameters
+```
+File odbcinst.ini:
+
+[OcientDB]
+Driver = /home/user/sqlalchemy/ocient_odbc.so
+FileUsage = 1
+[PostgreSQL]
+Driver64 = /usr/lib/x86_64-linux-gnu/odbc/psqlodbcw.so
+Setup64  = /usr/lib/x86_64-linux-gnu/odbc/libodbcpsqlS.so
+FileUsage = 1
+[ODBC]
+Trace = yes
+TraceFile = /home/user/sqlalchemy/odbctrace.out
+
+File: .odbc.ini
+[OcientDB]
+Description  = Ocient Test
+Driver       = OcientDB
+Host         = 10.10.5.23
+Port         = 4050
+Database     = Test
+UserName     = jason
+Password     = pwd
+[OcientLkr]
+Description  = Ocient Looker
+Driver       = OcientDB
+Host         = 10.10.3.23
+Port         = 4050
+Database     = looker_db
+UserName     = looker
+Password     = looker
+```
+
+# Required environment variable settings
+```
+export ODBCSYSINI=/home/user/
+export LD_LIBRARY_PATH=/home/user/sqlalchemy/lib/
+export PYTHONPATH=/home/user/sqlalchemy/
+``` 

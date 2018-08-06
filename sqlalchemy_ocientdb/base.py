@@ -97,11 +97,12 @@ class OcientDbCompiler(compiler.SQLCompiler):
 	            columns = OcientDbDialect.get_columns(dialect, connection, table_name, schema=schema)
 	            for col in columns:
 	                if str(col.get("type")).startswith("TIMESTAMP"):
-	                    for c in select._whereclause:
-		                if str(c.left)  == col.get("name"):
-		                    if (str(c.right).startswith("'") and str(c.right).endswith("'")) or \
-		                       (str(c.right).startswith('"') and str(c.right).endswith('"')):
-		      	                c.right.text = "TIMESTAMP(" + c.right.text + ")" 
+			    if isinstance(select._whereclause, elements.BooleanClauseList):
+	                        for c in select._whereclause:
+		                    if str(c.left)  == col.get("name"):
+		                        if (str(c.right).startswith("'") and str(c.right).endswith("'")) or \
+		                           (str(c.right).startswith('"') and str(c.right).endswith('"')):
+		      	                    c.right.text = "TIMESTAMP(" + c.right.text + ")" 
 	
         return super(OcientDbCompiler, self).visit_select( \
 		  select, asfrom=asfrom, parens=parens,    \
