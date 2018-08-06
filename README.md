@@ -22,9 +22,9 @@ For example:
 engine = create_engine('ocientdb+pyodbc://looker:looker@OcientLkr')
 ```
 
-# Sample ODBC Connection Parameters
+## Sample ODBC Connection Parameters
 ```
-File odbcinst.ini:
+File odbcinst.ini:  (directory where this file resides pointed to by env. variable 'ODBCSYSINI=')
 
 [OcientDB]
 Driver = /home/user/sqlalchemy/ocient_odbc.so
@@ -37,7 +37,7 @@ FileUsage = 1
 Trace = yes
 TraceFile = /home/user/sqlalchemy/odbctrace.out
 
-File: .odbc.ini
+File .odbc.ini:    (located in user's home directory)
 [OcientDB]
 Description  = Ocient Test
 Driver       = OcientDB
