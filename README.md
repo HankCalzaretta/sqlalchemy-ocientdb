@@ -38,6 +38,7 @@ Trace = yes
 TraceFile = /home/user/sqlalchemy/odbctrace.out
 
 File .odbc.ini:    (located in user's home directory)
+
 [OcientDB]
 Description  = Ocient Test
 Driver       = OcientDB
@@ -56,7 +57,7 @@ UserName     = looker
 Password     = looker
 ```
 
-# Required environment variable settings
+## Required environment variable settings
 ```
 export ODBCSYSINI=/home/user/
 export LD_LIBRARY_PATH=/home/user/sqlalchemy/lib/
